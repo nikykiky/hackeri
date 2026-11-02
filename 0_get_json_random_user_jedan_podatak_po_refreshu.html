@@ -1,0 +1,21 @@
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>Random User Info</h2>
+<p>Using the randomuser API to display data using jQuery getJSON method.</p>
+<div id="photo"></div>
+  
+<script>
+$(document).ready(function() {
+	$.getJSON('https://randomuser.me/api/', function(userData){
+        console.log(userData)
+        var lgPhoto = "<img src='" + userData.results[0].picture["large"] + "'>"
+        $('#photo').html(lgPhoto);
+	});
+});
+</script>
+</body>
+</html>
