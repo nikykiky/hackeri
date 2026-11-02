@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    body{
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .heade{
+        grid-area: header;
+        background-color: lightblue;
+    }
+    .sidebar{
+        grid-area: sidebar;
+        background-color: pink;
+    }
+    .main{
+        grid-area: main;
+        background-color: lightyellow;
+    }
+    .footer{
+        grid-area: footer;
+        background-color: lightgreen;
+    }
+    .grid{
+        height: 100vh;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        grid-gap: 10px;
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+    }
+    @media only screen and (min-width:400px){
+        .wrapper{
+            grid-template-columns: 200px 1fr;
+            grid-template-rows: auto 1fr auto;
+            grid-template-areas: 
+            "header header"
+            "sidebar main"
+            "sidebar footer";
+        }
+    }
+    </style>
+</head>
+
+<body>
+    <div class="grid">
+        <div class="header">
+            <h1>Header</h1>
+        </div>
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur atque optio quos, saepe quis aut
+                repudiandae nisi dolores labore eaque!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur atque optio quos, saepe quis aut
+                repudiandae nisi dolores labore eaque!</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur atque optio quos, saepe quis aut
+                repudiandae nisi dolores labore eaque!</p>
+        </div>
+        <div class="main">
+            <h1>Main</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas ab dolores sequi, aliquid maxime ipsa
+                corporis, dignissimos nemo cumque esse perspiciatis, officiis asperiores veniam a praesentium deserunt
+                dolorum tenetur quaerat harum quos accusamus delectus atque. Ullam itaque incidunt voluptas animi
+                minima, fugit mollitia dignissimos, reprehenderit, harum perferendis necessitatibus quod deleniti
+                architecto dicta quo? Quaerat praesentium temporibus libero accusamus quas aut, animi fuga repellat
+                consequuntur in explicabo doloribus est quis repellendus commodi maxime facere illo atque veniam. Ut
+                distinctio voluptatibus corporis eum! Totam ipsum natus nostrum officia sequi est esse sed dignissimos
+                fuga. Quis magni vel fugit impedit quam, at nihil temporibus ducimus explicabo sed asperiores, dolor
+                laborum omnis! Debitis eaque temporibus quia accusamus nisi consectetur pariatur veniam expedita error
+                non?</p>
+        </div>
+        <div class="footer">
+            <h1>Footer</h1>
+        </div>
+    </div>
+</body>
+
+</html>
